@@ -6,7 +6,7 @@ public class Armstrong {
 
     	Armstrong armstrong = new Armstrong();
 
-        int num = 136;
+        int num = 100;
 
         if (armstrong.checkArmstrongExample(num))
             System.out.println("\"" + num + "\" is a armstrong.");
@@ -15,14 +15,26 @@ public class Armstrong {
 
     }
 	public boolean checkArmstrongExample(Integer num) {
-		int c = 0, a, temp;
+		int rem,limit=1000, sum = 0; int temp = 0;
 		temp = num;
-		while (num > 0) {
-			a = num % 10;
-			num = num / 10;
-			c = c + (a * a * a);
+		System.out.print("Armstrong numbers from 1 to N:");
+		for (int i = 100; i <= limit; i++)
+		{
+			num = i;
+			while (num > 0)
+			{
+				rem = num % 10;
+				sum = sum + (rem*rem*rem);
+				num = num / 10;
+			}
+	 
+			if (sum == i)
+			{
+				System.out.print(i + " ");
+			}
+			sum = 0;
 		}
-		if (temp == c)
+		if (temp == sum)
 			return true;
 		else
 			return false;
