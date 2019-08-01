@@ -14,9 +14,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.assignment.code.SimpleInterest;
 
-//import com. assignment.code.Armstrong;
-
-@RunWith(MockitoJUnitRunner.class)
 public class SimpleInterestTest {
 
 	SimpleInterest sim;
@@ -32,9 +29,9 @@ public class SimpleInterestTest {
 
 	@Test
 	public void testSimpleInterestValue() {
-		System.out.println("test case find max");
+		System.out.println("test case");
 
-		Assert.assertEquals(sim.simpleInterest(1000, 10, 30), 3000, 0.001);
+		Assert.assertEquals(sim.simpleInterest(1000, 10, 12), 3000, 0.001);
 
 	}
 
